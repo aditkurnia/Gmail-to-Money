@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Mendapatkan Uang dengan Gmail</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .cover-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-top: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li {
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #4CAF50;
+        }
+        
+        .menu-icon {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 15px 0;
+        }
+        
+        .menu-icon-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f1f1f1;
+        }
+        
+        p, ul {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            color: white;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+            min-width: 180px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #45a049, #409143);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #0077b5);
+        }
+        
+        .btn-telegram:hover {
+            background: linear-gradient(135deg, #0077b5, #00669f);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #128C7E, #075E54);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+            
+            nav .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 10px 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                width: 100%;
+            }
+            
+            nav ul li a {
+                padding: 15px 20px;
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Panduan Mendapatkan Uang dengan Gmail</h1>
+            <img src="sampul.jpg" alt="Gmail Cover Image" class="cover-image">
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="menu-icon-container">
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#cara-buat-gmail">Cara Buat Gmail</a></li>
+                <li><a href="#format-gmail">Format Gmail</a></li>
+                <li><a href="#strategi">Strategi Menjual</a></li>
+                <li><a href="#tips">Tips Berinteraksi</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <section id="cara-buat-gmail">
+            <h2>Cara Membuat Gmail dengan Efektif</h2>
+            <p>Pertama, Anda perlu mengetahui cara membuat Gmail tanpa verifikasi kode OTP. Google memang menerapkan batasan ketat dalam pembuatan Gmail untuk menghindari bot. Berikut cara mengatasinya:</p>
+            <p>Anda perlu menginstal aplikasi tambahan yang berukuran kurang dari 1MB. Aplikasi ini aman karena merupakan aplikasi resmi dari Play Store dengan harga 31K. Tapi disini kamu akan Mendapatkan aplikasinya secara gratis! klik link dibawah untuk mendowload aplikasinya</p>
+            <div class="button-container">
+                <a href="https://play.google.com/store" class="btn btn-primary" target="_blank">Download Aplikasi</a>
+            </div>
+        </section>
+        
+        <section id="format-gmail">
+            <h2>Format Pembuatan Gmail yang Tepat</h2>
+            <p>Format email yang direkomendasikan adalah menggunakan nama orang asli ditambah angka, misalnya:</p>
+            <ul>
+                <li>Ujang37@gmail.com</li>
+                <li>Budi282@gmail.com</li>
+            </ul>
+            <p>Penting: Angka yang digunakan tidak boleh lebih dari 4 digit!</p>
+        </section>
+        
+        <section id="strategi">
+            <h2>Strategi Menawarkan Gmail ke Komunitas</h2>
+            <p>1. Cari komunitas jual beli Gmail di Facebook, WhatsApp, atau Telegram</p>
+            <p>2. Tawarkan dengan format: "Ready (jumlah Gmail) Fresh rate (harga per Gmail) minat PM"</p>
+            <p>Contoh: "Ready 10 Gmail fresh 800p minat PM"</p>
+            <p>3. Tunggu hingga dihubungi oleh calon pembeli</p>
+            <div class="button-container">
+                <a href="https://wa.me/yourwhatsapplink" class="btn btn-whatsapp" target="_blank">Gabung Komunitas WhatsApp</a>
+                <a href="https://t.me/yourtelegramlink" class="btn btn-telegram" target="_blank">Gabung Komunitas Telegram</a>
+            </div>
+        </section>
+        
+        <section id="tips">
+            <h2>Tips Berinteraksi dengan Pembeli dan Menghindari Penipuan</h2>
+            <p>1. Minta pembayaran terlebih dahulu sebelum mengirimkan Gmail</p>
+            <p>2. Tawarkan sistem cek-pay atau sistem 1-1 (kirim 1 Gmail setelah pembayaran, lalu ulangi)</p>
+            <p>3. Jika pembeli keberatan, gunakan rekber (rekening bersama) dengan admin komunitas yang terpercaya</p>
+            <p>4. Hindari transaksi jika pembeli menolak semua sistem pembayaran aman di atas</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Katsuo</p>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            var navMenu = document.getElementById("nav-menu");
+            navMenu.classList.toggle("active");
+        }
+        
+        // Menutup menu saat item menu diklik (untuk mobile)
+        var menuItems = document.querySelectorAll("#nav-menu li a");
+        menuItems.forEach(function(item) {
+            item.addEventListener("click", function() {
+                if (window.innerWidth <= 768) {
+                    document.getElementById("nav-menu").classList.remove("active");
+                }
+            });
+        });
+        
+        // Highlight menu item yang aktif berdasarkan scroll
+        window.addEventListener('scroll', function() {
+            var sections = document.querySelectorAll('section');
+            var scrollPosition = window.scrollY;
+            
+            sections.forEach(function(section) {
+                var sectionTop = section.offsetTop - 100;
+                var sectionHeight = section.offsetHeight;
+                var sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('nav ul li a').forEach(function(item) {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === '#' + sectionId) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
